@@ -2,10 +2,17 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { MantineProvider } from '@mantine/core'
 import Navigation from '../components/navigation'
+import Head from "next/head";
+import { NotificationsProvider } from '@mantine/notifications'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
+    return (
     <>
+        <Head>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            <title>Misty's Portfolio | Home</title>
+        </Head>
+
       <MantineProvider
         theme={{
           colorScheme: 'dark'
@@ -13,7 +20,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         withGlobalStyles
       >
         <Navigation />
-        <Component {...pageProps} />
+        <NotificationsProvider>
+            <Component {...pageProps} />
+        </NotificationsProvider>
       </MantineProvider>
     </>
   )

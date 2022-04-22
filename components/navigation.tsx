@@ -20,9 +20,21 @@ const Navigation: NextPage = () => {
         }
     }, [router.events])
 
+    const pages = ['home','about']
+    let pageLink = []
+    for(const page of pages) {
+        pageLink.push(
+            <Anchor
+                key={page}
+                component={Link}
+                href={`/${page}`}
+            >{page.charAt(0).toUpperCase() + page.slice(1)}
+            </Anchor>
+        )
+    }
     return (
         <>
-        <nav className="flex">
+        <nav>
                 <Burger 
                 opened={opened}
                 onClick={() => setOpened((o) => !o)}
@@ -34,7 +46,11 @@ const Navigation: NextPage = () => {
                 onClose={() => setOpened(false)}
                 closeButtonLabel="Close drawer"
                 >
-                    <Anchor component={Link} href="/about">About</Anchor>
+                    <div
+                        className={"flex flex-col items-center min-h-screen text-xl"}
+                    >
+                        {pageLink}
+                    </div>
                 </Drawer>
         </>
     )
