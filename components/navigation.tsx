@@ -1,9 +1,24 @@
 import { NextPage } from "next";
-import { useState } from 'react'
-import { Burger, Drawer } from '@mantine/core'
+import { useEffect, useState } from 'react'
+import { Anchor, Burger, Drawer } from '@mantine/core'
+import Link from 'next/link'
+import { useRouter } from "next/router";
 const Navigation: NextPage = () => {
 
     const [opened, setOpened] = useState(false)
+
+    const router = useRouter()
+    
+    useEffect(() => {
+        const handleRouteChange = () => {
+            setOpened(false)
+        }
+        router.events.on('routeChangeComplete', handleRouteChange)
+
+        return () => {
+            router.events.off('routeChangeComplete', handleRouteChange)
+        }
+    }, [router.events])
 
     return (
         <>
@@ -17,8 +32,9 @@ const Navigation: NextPage = () => {
                 <Drawer
                 opened={opened}
                 onClose={() => setOpened(false)}
+                closeButtonLabel="Close drawer"
                 >
-                    <h1>Hello Drawer</h1>
+                    <Anchor component={Link} href="/about">About</Anchor>
                 </Drawer>
         </>
     )
