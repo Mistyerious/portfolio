@@ -14,6 +14,10 @@ const About: NextPage = () => {
                 <Grid grow gutter={'xs'}>
                     <Grid.Col span={4}>
                         <Card radius={'md'} shadow={'md'} p={'lg'}>
+                            <Card.Section>
+                                <Text className={'text-center text-2xl'}>Skills</Text>
+                            </Card.Section>
+                            <hr style={{borderTop: "2px #4B4E58"}}/>
                             <Group>
                                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                                 <Text size={'lg'}>Hello there, I'm Aaron Dye (Jr)</Text>
