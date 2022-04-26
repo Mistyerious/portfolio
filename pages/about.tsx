@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import {Card, Container, Grid, Group, Image, Text} from "@mantine/core";
 
 const About: NextPage = () => {
     return (
@@ -9,7 +10,42 @@ const About: NextPage = () => {
                 <title>Misty's Portfolio | About</title>
             </Head>
 
-            <h1>Hello About Page</h1>
+            <Container style={{minHeight: "85vh", display: "flex", margin: "auto", alignItems: "center"}}>
+                <Grid grow gutter={'xs'}>
+                    <Grid.Col span={4}>
+                        <Card radius={'md'} shadow={'md'} p={'lg'}>
+                            <Group>
+                                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                <Text size={'lg'}>Hello there, I'm Aaron Dye (Jr)</Text>
+                            </Group>
+                        </Card>
+                    </Grid.Col>
+                    <Grid.Col span={4}>
+                        <Card radius={'md'} shadow={'md'} p={'lg'}>
+                            <Group>
+                                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                <Text size={'lg'}>Hello there, I'm Aaron Dye (Jr)</Text>
+                            </Group>
+                        </Card>
+                    </Grid.Col>
+                    <Grid.Col span={4}>
+                        <Card radius={'md'} shadow={'md'} p={'lg'}>
+                            <Group>
+                                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                <Text size={'lg'}>Hello there, I'm Aaron Dye (Jr)</Text>
+                            </Group>
+                        </Card>
+                    </Grid.Col>
+                    <Grid.Col span={4}>
+                        <Card radius={'md'} shadow={'md'} p={'lg'}>
+                            <Group>
+                                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                <Text size={'lg'}>Hello there, I'm Aaron Dye (Jr)</Text>
+                            </Group>
+                        </Card>
+                    </Grid.Col>
+                </Grid>
+            </Container>
         </>
     )
 }

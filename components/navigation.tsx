@@ -8,7 +8,7 @@ const Navigation: NextPage = () => {
     const [opened, setOpened] = useState(false)
 
     const router = useRouter()
-    
+
     useEffect(() => {
         const handleRouteChange = () => {
             setOpened(false)
@@ -25,24 +25,12 @@ const Navigation: NextPage = () => {
     for(const page of pages) {
         if(page === "home"){
             pageLink.push(
-                // <Anchor
-                //     key={page}
-                //     component={Link}
-                //     href={`/`}
-                // >{page.charAt(0).toUpperCase() + page.slice(1)}
-                // </Anchor>
                 <Link key={page} href={'/'}>
                     {page.charAt(0).toUpperCase() + page.slice(1)}
                 </Link>
             )
         } else {
             pageLink.push(
-                // <Anchor
-                //     key={page}
-                //     component={Link}
-                //     href={`/${page}`}
-                // >{page.charAt(0).toUpperCase() + page.slice(1)}
-                // </Anchor>
                 <Link key={page} href={`/${page}`}>
                     {page.charAt(0).toUpperCase() + page.slice(1)}
                 </Link>
