@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import {Avatar, Button, Center, Container, Grid, Image} from "@mantine/core";
+import {Avatar, Button, Center, Container, Grid, Image, Text} from "@mantine/core";
 import { motion } from 'framer-motion'
 import Link from 'next/link';
 const Index: NextPage = () => {
@@ -16,19 +16,20 @@ const Index: NextPage = () => {
                      alt={'dog'}
               />
               {/* eslint-disable-next-line react/no-unescaped-entities */}
-              <h1 className={'text-2xl text-center'}>Hello I'm Aaron and I'm <motion.span>{age}</motion.span></h1>
+              <Text component={"h1"} className={'text-2xl text-center'}>Hello I'm Aaron and I'm <motion.span>{age}</motion.span></Text>
               {/* eslint-disable-next-line react/no-unescaped-entities */}
-              <p className={'text-lg'}>I'm a novice developer who enjoys working on random projects. I also love nature and watching MacGyver.</p>
+              <Text component={"p"} className={"text-lg"}>I'm a novice developer who enjoys working on random projects. I also love nature and watching MacGyver.</Text>
+              <Text></Text>
               <br />
               <hr />
               <Grid className='mt-2'>
-                <Grid.Col span={2} offset={5}>
-                  <h1>Quick Access</h1>
+                <Grid.Col lg={2} offsetLg={5} span={3} offset={4}>
+                  <h1 style={{width: '100px'}}>Quick Access</h1>
                 </Grid.Col>
-                <Grid.Col span={2} offset={4}>
+                <Grid.Col lg={2} offsetLg={4} span={3} offset={4}>
                   <Link href={'/about'}><Button component={motion.button} whileHover={{ scale: 1.3 }} color='gray'>About Me</Button></Link>
                 </Grid.Col>
-                  <Grid.Col span={2}>
+                  <Grid.Col lg={2} offsetLg={-.20} span={3} offset={4}>
                   <Link href={'#'}><Button component={motion.button} whileHover={{ scale: 1.3 }} color='gray'>Projects</Button></Link>
                   </Grid.Col>
               </Grid>

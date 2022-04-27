@@ -11,8 +11,14 @@ const About: NextPage = () => {
             </Head>
 
             <Container style={{minHeight: "85vh", display: "flex", margin: "auto", alignItems: "center"}}>
-                <Grid grow gutter={'xs'}>
-                    <Grid.Col span={4}>
+                <Grid
+                    grow
+                    gutter={'xs'}
+                >
+                    <Grid.Col
+                        lg={4}
+                        sm={2}
+                    >
                         <Card radius={'md'} shadow={'md'} p={'lg'}>
                             <Card.Section>
                                 <Text className={'text-center text-2xl'}>Skills</Text>
@@ -24,7 +30,10 @@ const About: NextPage = () => {
                             </Group>
                         </Card>
                     </Grid.Col>
-                    <Grid.Col span={4}>
+                    <Grid.Col
+                        lg={4}
+                        sm={2}
+                    >
                         <Card radius={'md'} shadow={'md'} p={'lg'}>
                             <Group>
                                 {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -32,7 +41,10 @@ const About: NextPage = () => {
                             </Group>
                         </Card>
                     </Grid.Col>
-                    <Grid.Col span={4}>
+                    <Grid.Col
+                        lg={4}
+                        sm={2}
+                    >
                         <Card radius={'md'} shadow={'md'} p={'lg'}>
                             <Group>
                                 {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -40,7 +52,10 @@ const About: NextPage = () => {
                             </Group>
                         </Card>
                     </Grid.Col>
-                    <Grid.Col span={4}>
+                    <Grid.Col
+                        sm={2}
+                        lg={4}
+                    >
                         <Card radius={'md'} shadow={'md'} p={'lg'}>
                             <Group>
                                 {/* eslint-disable-next-line react/no-unescaped-entities */}
