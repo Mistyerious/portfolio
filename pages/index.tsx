@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import {Avatar, Button, Center, Container, Grid, Image, Text} from "@mantine/core";
+import {Avatar, Button, Center, Container, Divider, Grid, Image, Text} from "@mantine/core";
 import { motion } from 'framer-motion'
 import Link from 'next/link';
 const Index: NextPage = () => {
@@ -21,11 +21,8 @@ const Index: NextPage = () => {
               <Text component={"p"} className={"text-lg"}>I'm a novice developer who enjoys working on random projects. I also love nature and watching MacGyver.</Text>
               <Text></Text>
               <br />
-              <hr />
+              <Divider my={'xs'} label={'Quick Access'} labelPosition={'center'}/>
               <Grid className='mt-2'>
-                <Grid.Col lg={2} offsetLg={5} span={3} offset={4}>
-                  <h1 style={{width: '100px'}}>Quick Access</h1>
-                </Grid.Col>
                 <Grid.Col lg={2} offsetLg={4} span={3} offset={4}>
                   <Link href={'/about'}><Button component={motion.button} whileHover={{ scale: 1.3 }} color='gray'>About Me</Button></Link>
                 </Grid.Col>
