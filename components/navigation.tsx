@@ -20,7 +20,7 @@ const Navigation: NextPage = () => {
         }
     }, [router.events])
 
-    const pages = ['home','about']
+    const pages = ['home','about','projects']
     let pageLink = []
     for(const page of pages) {
         if(page === "home"){

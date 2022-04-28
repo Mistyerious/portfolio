@@ -27,7 +27,7 @@ const Index: NextPage = () => {
                   <Link href={'/about'}><Button component={motion.button} whileHover={{ scale: 1.3 }} color='gray'>About Me</Button></Link>
                 </Grid.Col>
                   <Grid.Col lg={2} offsetLg={-.20} span={3} offset={4}>
-                  <Link href={'#'}><Button component={motion.button} whileHover={{ scale: 1.3 }} color='gray'>Projects</Button></Link>
+                  <Link href={'/projects'}><Button component={motion.button} whileHover={{ scale: 1.3 }} color='gray'>Projects</Button></Link>
                   </Grid.Col>
               </Grid>
           </div>
